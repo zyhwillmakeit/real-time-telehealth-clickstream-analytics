@@ -1,6 +1,6 @@
 # Real-Time Telehealth Clickstream Analytics Platform
 
-An end-to-end data engineering project that turns unreliable, continuously arriving telehealth product events and periodically refreshed customer attributes into trustworthy analytics data.
+An end-to-end data engineering project that turns unreliable, continuously arriving telehealth product events and periodically refreshed customer attributes into reliable analytics data.
 
 The platform simulates patient booking and virtual-visit journeys, transports events through Kafka, processes them with Spark Structured Streaming on Databricks, and stores raw and curated data in Delta Lake. Customer master data is ingested from PostgreSQL on a schedule and joined to behavioral events. dbt then builds business-ready facts and marts for product analytics and platform-health dashboards.
 

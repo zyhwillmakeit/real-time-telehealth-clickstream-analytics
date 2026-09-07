@@ -84,17 +84,6 @@ These are targets to validate, not claimed results.
 
 See [Metric contracts](docs/metrics.md) for formulas and [project scope](docs/project-scope.md) for assumptions and exclusions.
 
-## Delivery plan
-
-The project is planned as a 30-day solo build at roughly 4–5 hours per day.
-
-- Days 1–7: contracts, simulator, Kafka, and raw ingestion
-- Days 8–14: validation, deduplication, customer snapshots, and trusted Silver data
-- Days 15–21: dbt facts, marts, orchestration, and two dashboards
-- Days 22–27: reconciliation, schema evolution, recovery, performance, CI, and cost controls
-- Days 28–30: documentation, reproducibility review, demo, and final acceptance
-
-The full daily checklist is in [ROADMAP.md](ROADMAP.md).
 
 ## Repository layout
 

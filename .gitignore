@@ -1,0 +1,38 @@
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# dbt
+dbt_telehealth/target/
+dbt_telehealth/logs/
+dbt_telehealth/dbt_packages/
+dbt_telehealth/profiles.yml
+
+# Databricks and local data
+.databricks/
+checkpoints/
+data/
+*.parquet
+*.avro
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Generated evidence; keep reviewed Markdown summaries and small screenshots
+evidence/raw/
+

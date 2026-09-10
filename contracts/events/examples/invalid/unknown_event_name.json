@@ -1,0 +1,21 @@
+{
+  "description": "Unknown event names fail the Avro enum contract.",
+  "expected_error_codes": ["AVRO_SCHEMA_INVALID"],
+  "event": {
+    "event_id": "evt_00000000000000000000000000000017",
+    "event_name": "appointment_refunded",
+    "event_time": "2026-09-10T15:00:00.000000Z",
+    "received_at": "2026-09-10T15:00:01.000000Z",
+    "anonymous_id": "anon_00000000000000000000000000000007",
+    "customer_id": null,
+    "session_id": "ses_00000000000000000000000000000008",
+    "booking_journey_id": null,
+    "appointment_id": null,
+    "scheduled_start_time": null,
+    "provider_id": null,
+    "device_type": "desktop",
+    "platform": "web",
+    "specialty": "primary_care",
+    "schema_version": 1
+  }
+}

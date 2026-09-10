@@ -1,0 +1,21 @@
+{
+  "description": "At booking time the scheduled visit cannot precede the booking event.",
+  "expected_error_codes": ["SCHEDULED_START_BEFORE_BOOKING"],
+  "event": {
+    "event_id": "evt_00000000000000000000000000000015",
+    "event_name": "appointment_booked",
+    "event_time": "2026-09-10T15:04:00.000000Z",
+    "received_at": "2026-09-10T15:04:02.000000Z",
+    "anonymous_id": null,
+    "customer_id": "cus_00000002",
+    "session_id": "ses_00000000000000000000000000000006",
+    "booking_journey_id": "bkj_00000000000000000000000000000003",
+    "appointment_id": "apt_00000000000000000000000000000002",
+    "scheduled_start_time": "2026-09-10T14:00:00.000000Z",
+    "provider_id": "prv_000003",
+    "device_type": "tablet",
+    "platform": "web",
+    "specialty": "primary_care",
+    "schema_version": 1
+  }
+}

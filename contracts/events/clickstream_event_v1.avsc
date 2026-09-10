@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "name": "TelehealthClickstreamEvent",
+  "namespace": "com.telehealth.analytics.clickstream.v1",
+  "doc": "Synthetic product analytics event. Contains no clinical or protected health information.",
+  "fields": [
+    {"name": "event_id", "type": "string", "doc": "Immutable business-event identifier. Retries reuse this value."},
+    {
+      "name": "event_name",
+      "type": {
+        "type": "enum",
+        "name": "EventName",
+        "symbols": [
+          "specialty_searched",
+          "provider_profile_viewed",
+          "appointment_slot_viewed",
+          "booking_started",
+          "appointment_booked",
+          "checkin_started",
+          "waiting_room_entered",
+          "video_visit_started",
+          "video_connection_failed",
+          "visit_completed"
+        ]
+      }
+    },
+    {
+      "name": "event_time",
+      "type": {"type": "long", "logicalType": "timestamp-micros"},
+      "doc": "UTC time at which the user action occurred."
+    },
+    {
+      "name": "received_at",
+      "type": {"type": "long", "logicalType": "timestamp-micros"},
+      "doc": "UTC time at which the collection service accepted the event for delivery."
+    },
+    {"name": "anonymous_id", "type": ["null", "string"], "default": null},
+    {"name": "customer_id", "type": ["null", "string"], "default": null},
+    {"name": "session_id", "type": "string"},
+    {"name": "booking_journey_id", "type": ["null", "string"], "default": null},
+    {"name": "appointment_id", "type": ["null", "string"], "default": null},
+    {
+      "name": "scheduled_start_time",
+      "type": ["null", {"type": "long", "logicalType": "timestamp-micros"}],
+      "default": null
+    },
+    {"name": "provider_id", "type": ["null", "string"], "default": null},
+    {"name": "device_type", "type": "string"},
+    {"name": "platform", "type": "string"},
+    {"name": "specialty", "type": ["null", "string"], "default": null},
+    {"name": "schema_version", "type": "int", "default": 1}
+  ]
+}

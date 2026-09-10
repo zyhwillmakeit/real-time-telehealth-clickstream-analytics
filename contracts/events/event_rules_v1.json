@@ -1,0 +1,48 @@
+{
+  "contract_version": "1.0.0",
+  "schema_version": 1,
+  "global_required_fields": [
+    "event_id",
+    "event_name",
+    "event_time",
+    "received_at",
+    "session_id",
+    "device_type",
+    "platform",
+    "schema_version"
+  ],
+  "identity_at_least_one_of": ["anonymous_id", "customer_id"],
+  "timestamp_fields": ["event_time", "received_at", "scheduled_start_time"],
+  "max_event_clock_skew_seconds": 300,
+  "allowed_values": {
+    "device_type": ["desktop", "mobile", "tablet"],
+    "platform": ["android", "ios", "web"],
+    "specialty": ["dermatology", "mental_health", "pediatrics", "primary_care"]
+  },
+  "platforms_by_device": {
+    "desktop": ["web"],
+    "mobile": ["android", "ios", "web"],
+    "tablet": ["android", "ios", "web"]
+  },
+  "identifier_patterns": {
+    "event_id": "^evt_[0-9a-f]{32}$",
+    "anonymous_id": "^anon_[0-9a-f]{32}$",
+    "customer_id": "^cus_[0-9]{8}$",
+    "session_id": "^ses_[0-9a-f]{32}$",
+    "booking_journey_id": "^bkj_[0-9a-f]{32}$",
+    "appointment_id": "^apt_[0-9a-f]{32}$",
+    "provider_id": "^prv_[0-9]{6}$"
+  },
+  "event_required_fields": {
+    "specialty_searched": ["specialty"],
+    "provider_profile_viewed": ["booking_journey_id", "provider_id", "specialty"],
+    "appointment_slot_viewed": ["booking_journey_id", "provider_id", "specialty"],
+    "booking_started": ["booking_journey_id", "customer_id", "provider_id", "specialty"],
+    "appointment_booked": ["appointment_id", "booking_journey_id", "customer_id", "provider_id", "scheduled_start_time", "specialty"],
+    "checkin_started": ["appointment_id", "booking_journey_id", "customer_id", "provider_id", "scheduled_start_time", "specialty"],
+    "waiting_room_entered": ["appointment_id", "booking_journey_id", "customer_id", "provider_id", "scheduled_start_time", "specialty"],
+    "video_visit_started": ["appointment_id", "booking_journey_id", "customer_id", "provider_id", "scheduled_start_time", "specialty"],
+    "video_connection_failed": ["appointment_id", "booking_journey_id", "customer_id", "provider_id", "scheduled_start_time", "specialty"],
+    "visit_completed": ["appointment_id", "booking_journey_id", "customer_id", "provider_id", "scheduled_start_time", "specialty"]
+  }
+}

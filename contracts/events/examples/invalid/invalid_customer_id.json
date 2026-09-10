@@ -1,0 +1,21 @@
+{
+  "description": "Customer IDs use the stable cus_######## format.",
+  "expected_error_codes": ["IDENTIFIER_FORMAT_INVALID:customer_id"],
+  "event": {
+    "event_id": "evt_00000000000000000000000000000016",
+    "event_name": "booking_started",
+    "event_time": "2026-09-10T15:03:00.000000Z",
+    "received_at": "2026-09-10T15:03:02.000000Z",
+    "anonymous_id": "anon_00000000000000000000000000000006",
+    "customer_id": "customer-2",
+    "session_id": "ses_00000000000000000000000000000007",
+    "booking_journey_id": "bkj_00000000000000000000000000000004",
+    "appointment_id": null,
+    "scheduled_start_time": null,
+    "provider_id": "prv_000004",
+    "device_type": "mobile",
+    "platform": "android",
+    "specialty": "pediatrics",
+    "schema_version": 1
+  }
+}

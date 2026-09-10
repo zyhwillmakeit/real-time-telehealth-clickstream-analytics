@@ -1,0 +1,21 @@
+{
+  "description": "Desktop events cannot claim a native mobile platform.",
+  "expected_error_codes": ["DEVICE_PLATFORM_MISMATCH"],
+  "event": {
+    "event_id": "evt_00000000000000000000000000000013",
+    "event_name": "provider_profile_viewed",
+    "event_time": "2026-09-10T15:00:00.000000Z",
+    "received_at": "2026-09-10T15:00:01.000000Z",
+    "anonymous_id": "anon_00000000000000000000000000000003",
+    "customer_id": null,
+    "session_id": "ses_00000000000000000000000000000004",
+    "booking_journey_id": "bkj_00000000000000000000000000000002",
+    "appointment_id": null,
+    "scheduled_start_time": null,
+    "provider_id": "prv_000002",
+    "device_type": "desktop",
+    "platform": "ios",
+    "specialty": "mental_health",
+    "schema_version": 1
+  }
+}

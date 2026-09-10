@@ -1,0 +1,21 @@
+{
+  "description": "A booking-success event must identify the appointment.",
+  "expected_error_codes": ["FIELD_REQUIRED:appointment_id"],
+  "event": {
+    "event_id": "evt_00000000000000000000000000000011",
+    "event_name": "appointment_booked",
+    "event_time": "2026-09-10T15:04:00.000000Z",
+    "received_at": "2026-09-10T15:04:02.000000Z",
+    "anonymous_id": null,
+    "customer_id": "cus_00000001",
+    "session_id": "ses_00000000000000000000000000000001",
+    "booking_journey_id": "bkj_00000000000000000000000000000001",
+    "appointment_id": null,
+    "scheduled_start_time": "2026-09-12T16:00:00.000000Z",
+    "provider_id": "prv_000001",
+    "device_type": "mobile",
+    "platform": "ios",
+    "specialty": "dermatology",
+    "schema_version": 1
+  }
+}

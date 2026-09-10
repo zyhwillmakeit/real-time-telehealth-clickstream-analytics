@@ -4,6 +4,7 @@
 !.env.example
 *.pem
 *.key
+.Rhistory
 
 # Python
 __pycache__/

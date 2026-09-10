@@ -1,0 +1,17 @@
+{
+  "event_id": "evt_00000000000000000000000000000001",
+  "event_name": "provider_profile_viewed",
+  "event_time": "2026-09-10T15:00:00.000000Z",
+  "received_at": "2026-09-10T15:00:01.250000Z",
+  "anonymous_id": "anon_00000000000000000000000000000001",
+  "customer_id": null,
+  "session_id": "ses_00000000000000000000000000000001",
+  "booking_journey_id": "bkj_00000000000000000000000000000001",
+  "appointment_id": null,
+  "scheduled_start_time": null,
+  "provider_id": "prv_000001",
+  "device_type": "mobile",
+  "platform": "ios",
+  "specialty": "dermatology",
+  "schema_version": 1
+}

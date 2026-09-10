@@ -1,0 +1,17 @@
+{
+  "event_id": "evt_00000000000000000000000000000003",
+  "event_name": "visit_completed",
+  "event_time": "2026-09-12T16:31:00.000000Z",
+  "received_at": "2026-09-12T16:31:03.000000Z",
+  "anonymous_id": "anon_00000000000000000000000000000001",
+  "customer_id": "cus_00000001",
+  "session_id": "ses_00000000000000000000000000000002",
+  "booking_journey_id": "bkj_00000000000000000000000000000001",
+  "appointment_id": "apt_00000000000000000000000000000001",
+  "scheduled_start_time": "2026-09-12T16:00:00.000000Z",
+  "provider_id": "prv_000001",
+  "device_type": "desktop",
+  "platform": "web",
+  "specialty": "dermatology",
+  "schema_version": 1
+}

@@ -4,3 +4,5 @@ Reviewed reconciliation, recovery, performance, freshness, cost, and final accep
 
 - [`day-02/`](day-02/) records the local environment preparation and pending cloud-connectivity gate.
 - [`day-04/`](day-04/) contains the reviewed deterministic 10,000-customer V1 snapshot and manifest.
+
+- [Day 5 acceptance](day-05/acceptance.json): deterministic journey counts and checksums; full outputs are generated under ignored `data/day-05/`.

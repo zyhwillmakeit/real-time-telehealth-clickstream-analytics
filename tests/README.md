@@ -7,3 +7,5 @@ Tests are added with their production contracts and code.
 - `test_customer_data.py` checks deterministic Day 4 generation and updates, CSV round trips, the complete 10,000-row fixture, its manifest checksum, domains, and PostgreSQL configuration safety.
 
 Later days add integration, reconciliation, schema-evolution, failure-recovery, and performance scenarios.
+
+`test_journeys.py` verifies causal ordering, cross-day sessions, contract validity, deterministic IDs, expected outcomes and observation cutoffs. Test discovery is limited to `tests/` so manual connection scripts are not executed.

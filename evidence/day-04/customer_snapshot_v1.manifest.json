@@ -1,0 +1,46 @@
+{
+  "columns": [
+    "customer_id",
+    "signup_date",
+    "region",
+    "membership_plan",
+    "acquisition_channel",
+    "account_status",
+    "created_at",
+    "updated_at",
+    "is_deleted"
+  ],
+  "contract_version": "1.0.0",
+  "deleted_row_count": 0,
+  "distributions": {
+    "account_status": {
+      "active": 9637,
+      "closed": 74,
+      "suspended": 289
+    },
+    "acquisition_channel": {
+      "employer": 2239,
+      "organic": 4198,
+      "paid_search": 2049,
+      "referral": 1514
+    },
+    "membership_plan": {
+      "basic": 6821,
+      "premium": 3179
+    },
+    "region": {
+      "midwest": 2273,
+      "northeast": 1800,
+      "south": 3725,
+      "west": 2202
+    }
+  },
+  "file": "customer_snapshot_v1.csv",
+  "generator_seed": 20260910,
+  "non_deleted_row_count": 10000,
+  "row_count": 10000,
+  "sha256": "fa4649bd865d39573ada84cde032409b23e72095909caeefcb7940246b5abee8",
+  "snapshot_at": "2026-09-10T23:59:59.000000Z",
+  "snapshot_id": "customer_snapshot_v1",
+  "unique_customer_count": 10000
+}

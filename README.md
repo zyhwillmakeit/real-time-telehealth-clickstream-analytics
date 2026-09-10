@@ -81,7 +81,7 @@ These are targets to validate, not claimed results.
 | Failure recovery | Resume and catch up within 10 minutes in the controlled test |
 | Eventual completeness | Reconciled output matches the generator manifest |
 
-See [Metric contracts](docs/metrics.md) for formulas and [project scope](docs/project-scope.md) for assumptions and exclusions.
+See [Metric contracts](docs/metrics.md) for formulas, the [V1 data contract](docs/data-contract.md) for event and customer-source rules, [deterministic customer data](docs/customer-data.md) for source fixtures and update behavior, and [project scope](docs/project-scope.md) for assumptions and exclusions.
 
 The Day 2 environment gate and redacted smoke-test instructions are in [Environment and connectivity](docs/day-02-environment.md).
 
@@ -105,6 +105,8 @@ evidence/            Reconciliation, performance, recovery, and demo evidence
 - [x] Target users and business questions are defined
 - [x] Architecture and component ownership are documented
 - [x] Metric grains, denominators, and observation windows are defined
+- [x] V1 event contracts, fixtures, validation rules, and customer DDL are executable
+- [x] A deterministic 10,000-customer source snapshot and update workflow are validated
 - [x] Thirty-day delivery plan has daily acceptance outputs
 - [ ] Cloud services and end-to-end connectivity are verified
 - [ ] Streaming and batch pipelines are implemented

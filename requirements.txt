@@ -1,0 +1,10 @@
+# Day 2 tested top-level dependency set (Python 3.11).
+# Install exact transitive versions with: pip install -r requirements.lock
+boto3==1.43.91
+confluent-kafka==2.15.0
+dbt-databricks==1.10.19
+fastavro==1.12.2
+psycopg[binary]==3.3.5
+pytest==9.1.1
+python-dotenv==1.2.3
+ruff==0.16.6

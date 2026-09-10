@@ -1,0 +1,52 @@
+{
+  "dependencies": {
+    "boto3": "1.43.91",
+    "confluent-kafka": "2.15.0",
+    "databricks-sdk": "0.63.0",
+    "databricks-sql-connector": "4.0.5",
+    "dbt-core": "1.10.19",
+    "dbt-databricks": "1.10.19",
+    "fastavro": "1.12.2",
+    "psycopg": "3.3.5"
+  },
+  "generated_at": "2026-09-10T02:18:20.541276+00:00",
+  "python": "3.11.1",
+  "results": [
+    {
+      "check": "configuration",
+      "detail": "Missing: KAFKA_BOOTSTRAP_SERVERS, KAFKA_API_KEY, KAFKA_API_SECRET",
+      "service": "kafka",
+      "status": "BLOCKED"
+    },
+    {
+      "check": "configuration",
+      "detail": "Missing: SCHEMA_REGISTRY_URL",
+      "service": "schema_registry",
+      "status": "BLOCKED"
+    },
+    {
+      "check": "configuration",
+      "detail": "Missing: POSTGRES_HOST, POSTGRES_DATABASE, POSTGRES_USER, POSTGRES_PASSWORD",
+      "service": "postgres",
+      "status": "BLOCKED"
+    },
+    {
+      "check": "configuration",
+      "detail": "Missing: DATABRICKS_HOST, DATABRICKS_TOKEN",
+      "service": "databricks_workspace",
+      "status": "BLOCKED"
+    },
+    {
+      "check": "configuration",
+      "detail": "Missing: DATABRICKS_HOST, DATABRICKS_HTTP_PATH, DATABRICKS_TOKEN",
+      "service": "sql_warehouse",
+      "status": "BLOCKED"
+    },
+    {
+      "check": "configuration",
+      "detail": "Missing: AWS_REGION, S3_BUCKET",
+      "service": "object_storage",
+      "status": "BLOCKED"
+    }
+  ]
+}

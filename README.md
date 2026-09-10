@@ -4,7 +4,6 @@ An end-to-end data engineering project that turns unreliable, continuously arriv
 
 The platform simulates patient booking and virtual-visit journeys, transports events through Kafka, processes them with Spark Structured Streaming on Databricks, and stores raw and curated data in Delta Lake. Customer master data is ingested from PostgreSQL on a schedule and joined to behavioral events. dbt then builds business-ready facts and marts for product analytics and platform-health dashboards.
 
-
 ## Business questions
 
 - Where do users leave the booking journey?
@@ -84,6 +83,7 @@ These are targets to validate, not claimed results.
 
 See [Metric contracts](docs/metrics.md) for formulas and [project scope](docs/project-scope.md) for assumptions and exclusions.
 
+The Day 2 environment gate and redacted smoke-test instructions are in [Environment and connectivity](docs/day-02-environment.md).
 
 ## Repository layout
 
@@ -114,4 +114,3 @@ evidence/            Reconciliation, performance, recovery, and demo evidence
 ## Safety and privacy
 
 The project uses synthetic product-analytics data only. It contains no real patient, clinical, diagnosis, payment, or protected health information. `visit_completed` represents an observed product event in the simulation, not independently verified clinical care.
-

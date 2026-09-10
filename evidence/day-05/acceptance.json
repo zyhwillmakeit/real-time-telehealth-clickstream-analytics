@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-09-15T12:00:00.000000Z",
+  "booking_funnel": {
+    "appointment_booked": 400,
+    "booking_started": 500,
+    "provider_view": 700
+  },
+  "customer_source_sha256": "fa4649bd865d39573ada84cde032409b23e72095909caeefcb7940246b5abee8",
+  "events_sha256": "9e53eb0820ca1b5459fbcff4106f2195d5eb32dfd8864eb3b0428e5c29952492",
+  "expected_event_counts": {
+    "appointment_booked": 400,
+    "appointment_slot_viewed": 600,
+    "booking_started": 500,
+    "checkin_started": 293,
+    "provider_profile_viewed": 700,
+    "specialty_searched": 700,
+    "video_connection_failed": 98,
+    "video_visit_started": 194,
+    "visit_completed": 95,
+    "waiting_room_entered": 293
+  },
+  "expected_unique_events": 3873,
+  "mature_appointments": 254,
+  "mature_completed_appointments": 63,
+  "observing_appointments": 146,
+  "scenario_policy": "cycle_seven_acceptance_scenarios",
+  "seed": 20260912,
+  "start_at": "2026-09-12T00:00:00.000000Z",
+  "verification": "18 tests passed; all generated events validated against V1"
+}

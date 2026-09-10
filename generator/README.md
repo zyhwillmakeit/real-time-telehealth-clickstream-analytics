@@ -13,3 +13,5 @@ Day 4 adds deterministic customer-source generation. `customer_data.py` owns the
 See [`docs/customer-data.md`](../docs/customer-data.md) for guarantees, artifacts, arguments, and optional PostgreSQL loading.
 
 Days 5–6 will add the journey state machine, delivery delay queue, configurable failure injection, and expected-results manifests without duplicating customer generation.
+
+Day 5: run `.venv/bin/python -m scripts.generate_journeys`. See [journey simulation](../docs/day-05-journeys.md).

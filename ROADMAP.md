@@ -8,7 +8,7 @@ Assumption: one developer, 4–5 hours per day. Each day ends with a reviewable 
 - [ ] **Day 2:** Verify Kafka, Schema Registry, PostgreSQL, Databricks, object storage, and SQL Warehouse connectivity; lock the first tested dependency set.
 - [x] **Day 3:** Define Avro event schema V1, field-level and event-level validation rules, timestamp conventions, journey identifiers, and customer DDL.
 - [x] **Day 4:** Build deterministic customer seed/update scripts and the first complete customer extract; validate approximately 10,000 unique customers.
-- [ ] **Day 5:** Build the causal journey simulator with sessions, booking attempts, appointments, delayed virtual visits, and an expected-results manifest.
+- [x] **Day 5:** Build the causal journey simulator with sessions, booking attempts, appointments, delayed virtual visits, and an expected-results manifest.
 - [ ] **Day 6:** Connect the simulator to Kafka and Schema Registry; add configurable retry, delay, out-of-order, corrupt, and missing-customer scenarios.
 - [ ] **Day 7:** Implement Kafka-to-Bronze raw ingestion with persistent checkpointing; prove stop/restart continuity.
 

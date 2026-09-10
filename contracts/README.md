@@ -2,7 +2,7 @@
 
 This directory contains the versioned source contracts that producers, streaming validation, tests, and downstream models share.
 
-## Day 3 deliverables
+## Deliverables
 
 | Artifact | Purpose |
 |---|---|

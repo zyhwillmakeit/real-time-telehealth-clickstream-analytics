@@ -1,4 +1,4 @@
-# Day 2 Evidence
+# 2 Evidence
 
 ## Local preparation
 

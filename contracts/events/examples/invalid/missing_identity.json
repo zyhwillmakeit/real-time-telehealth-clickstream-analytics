@@ -1,0 +1,21 @@
+{
+  "description": "Every product event needs an anonymous or authenticated identity.",
+  "expected_error_codes": ["IDENTITY_REQUIRED"],
+  "event": {
+    "event_id": "evt_00000000000000000000000000000014",
+    "event_name": "specialty_searched",
+    "event_time": "2026-09-10T15:00:00.000000Z",
+    "received_at": "2026-09-10T15:00:01.000000Z",
+    "anonymous_id": null,
+    "customer_id": null,
+    "session_id": "ses_00000000000000000000000000000005",
+    "booking_journey_id": null,
+    "appointment_id": null,
+    "scheduled_start_time": null,
+    "provider_id": null,
+    "device_type": "mobile",
+    "platform": "android",
+    "specialty": "pediatrics",
+    "schema_version": 1
+  }
+}

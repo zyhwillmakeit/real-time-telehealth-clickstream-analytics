@@ -9,3 +9,5 @@ Tests are added with their production contracts and code.
 Later days add integration, reconciliation, schema-evolution, failure-recovery, and performance scenarios.
 
 `test_journeys.py` verifies causal ordering, cross-day sessions, contract validity, deterministic IDs, expected outcomes and observation cutoffs. Test discovery is limited to `tests/` so manual connection scripts are not executed.
+
+`test_delivery.py` checks Avro round trips, duplicate identity, corruption, customer remapping, Registry requests and acknowledgement failures with offline fakes.

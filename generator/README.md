@@ -15,3 +15,5 @@ See [`docs/customer-data.md`](../docs/customer-data.md) for guarantees, artifact
 Days 5–6 will add the journey state machine, delivery delay queue, configurable failure injection, and expected-results manifests without duplicating customer generation.
 
 Day 5: run `.venv/bin/python -m scripts.generate_journeys`. See [journey simulation](../docs/day-05-journeys.md).
+
+Day 6: `python -m scripts.publish_events` plans offline; add `--send` for live delivery. See [instructions](../docs/day-06-kafka.md).

@@ -22,6 +22,7 @@ dbt_telehealth/dbt_packages/
 dbt_telehealth/profiles.yml
 
 # Databricks and local data
+kafka_test.py
 .databricks/
 checkpoints/
 data/

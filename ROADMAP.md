@@ -10,6 +10,7 @@ Assumption: one developer, 4–5 hours per day. Each day ends with a reviewable 
 - [x] **Day 4:** Build deterministic customer seed/update scripts and the first complete customer extract; validate approximately 10,000 unique customers.
 - [x] **Day 5:** Build the causal journey simulator with sessions, booking attempts, appointments, delayed virtual visits, and an expected-results manifest.
 - [ ] **Day 6:** Connect the simulator to Kafka and Schema Registry; add configurable retry, delay, out-of-order, corrupt, and missing-customer scenarios.
+  Local producer, Avro framing and fault planning implemented and tested; live Registry registration and Avro readback pending. See [Day 6](docs/day-06-kafka.md).
 - [ ] **Day 7:** Implement Kafka-to-Bronze raw ingestion with persistent checkpointing; prove stop/restart continuity.
 
 ## Week 2 — Trusted Silver data

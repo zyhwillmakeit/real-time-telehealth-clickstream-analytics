@@ -1,0 +1,50 @@
+{
+  "clean": {
+    "customer_sha256": "fa4649bd865d39573ada84cde032409b23e72095909caeefcb7940246b5abee8",
+    "delay_seconds": 2100,
+    "expected_corrupt_deliveries": 0,
+    "expected_valid_unique_events": 3873,
+    "flags": {},
+    "input_sha256": "9e53eb0820ca1b5459fbcff4106f2195d5eb32dfd8864eb3b0428e5c29952492",
+    "mode": "compressed_historical_replay",
+    "planned_deliveries": 3873,
+    "rates": {
+      "corrupt": 0,
+      "delay": 0,
+      "duplicate": 0,
+      "missing": 0,
+      "reorder": 0
+    },
+    "seed": 6,
+    "status": "OFFLINE_VALIDATED"
+  },
+  "faults": {
+    "customer_sha256": "fa4649bd865d39573ada84cde032409b23e72095909caeefcb7940246b5abee8",
+    "delay_seconds": 2100,
+    "expected_corrupt_deliveries": 98,
+    "expected_valid_unique_events": 3783,
+    "flags": {
+      "corrupt": 98,
+      "delayed": 404,
+      "duplicate": 362,
+      "missing_customer": 80,
+      "reorder_candidate": 886
+    },
+    "input_sha256": "9e53eb0820ca1b5459fbcff4106f2195d5eb32dfd8864eb3b0428e5c29952492",
+    "mode": "compressed_historical_replay",
+    "planned_deliveries": 4235,
+    "rates": {
+      "corrupt": 0.02,
+      "delay": 0.1,
+      "duplicate": 0.1,
+      "missing": 0.05,
+      "reorder": 0.2
+    },
+    "seed": 6,
+    "status": "OFFLINE_VALIDATED"
+  },
+  "live_kafka_avro_test": "NOT_RUN",
+  "live_schema_registry_test": "NOT_RUN",
+  "status": "LOCAL_VALIDATED_LIVE_PENDING",
+  "tests_passed": 23
+}

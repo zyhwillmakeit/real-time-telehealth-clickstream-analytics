@@ -1,4 +1,4 @@
-# Day 6: Avro delivery and fault scenarios
+# Avro delivery and fault scenarios
 
 Local implementation is ready. Live Schema Registry registration and Avro delivery
 remain pending manual execution. The earlier JSON smoke test does not prove Avro

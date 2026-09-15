@@ -27,7 +27,7 @@ same customer keys as the batch source.
 
 Booked appointments are scheduled 1–3 days later. Visit events retain appointment,
 journey, provider, specialty and customer identity but use a new session. Normal
-collection delay is two seconds. Events are sorted by collection time. Day 6
+collection delay is two seconds. Events are sorted by collection time. Later I
 will introduce delivery retries, lateness and corruption separately.
 
 Outputs in ignored `data/day-05/`:

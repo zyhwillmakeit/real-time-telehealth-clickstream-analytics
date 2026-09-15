@@ -1,6 +1,6 @@
-# Day 2 — Environment and Connectivity Gate
+# Environment and Connectivity Gate
 
-Day 2 is complete only when all six read-only checks pass against the environment that will be used for implementation. Installing clients or filling configuration templates is not sufficient.
+This session is complete only when all six read-only checks pass against the environment that will be used for implementation. Installing clients or filling configuration templates is not sufficient.
 
 ## Tested local toolchain
 

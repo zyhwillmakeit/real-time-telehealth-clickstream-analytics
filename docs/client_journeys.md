@@ -19,6 +19,7 @@ booking start;
 3. video connection failure;
 4. no-show;
 5. started but unfinished visit.
+   
 These are acceptance scenarios, not measured population rates.
 Customers may make multiple attempts, each with its own journey and session.
 Pre-login events retain an anonymous ID; authenticated booking events use the

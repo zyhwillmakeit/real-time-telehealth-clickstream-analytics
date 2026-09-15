@@ -1,4 +1,4 @@
-# Day 5: Causal journey simulation
+# Causal journey simulation
 
 Run from the repository root:
 

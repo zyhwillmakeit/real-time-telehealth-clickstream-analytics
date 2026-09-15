@@ -7,7 +7,7 @@ Run from the repository root:
 .venv/bin/python -m pytest -q
 ```
 
-The default run reads the Day 4 customer snapshot and simulates 700 booking
+The default run reads the customer snapshot and simulates 700 booking
 attempts, starting at 2026-09-12 00:00 UTC, one per minute. A fixed seed controls
 customer selection, device, specialty, provider and appointment delay. Only
 active, non-deleted customers created before simulation start are eligible.

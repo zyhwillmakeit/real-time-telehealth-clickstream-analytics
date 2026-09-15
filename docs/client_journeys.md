@@ -12,9 +12,14 @@ attempts, starting at 2026-09-12 00:00 UTC, one per minute. A fixed seed control
 customer selection, device, specialty, provider and appointment delay. Only
 active, non-deleted customers created before simulation start are eligible.
 
-Seven scenarios cycle: abandonment after profile, after slot browsing, or after
-booking start; completed visit; video connection failure; no-show; started but
-unfinished visit. These are acceptance scenarios, not measured population rates.
+Seven scenarios cycle: 
+1. Abandonment after profile, after slot browsing, or after
+booking start;
+2. completed visit;
+3. video connection failure;
+4. no-show;
+5. started but unfinished visit.
+These are acceptance scenarios, not measured population rates.
 Customers may make multiple attempts, each with its own journey and session.
 Pre-login events retain an anonymous ID; authenticated booking events use the
 same customer keys as the batch source.

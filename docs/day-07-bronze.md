@@ -1,4 +1,4 @@
-# Day 7: Kafka to raw Bronze and restart acceptance
+# 7. Kafka to raw Bronze and restart acceptance
 
 ## Status and boundaries
 

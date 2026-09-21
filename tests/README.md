@@ -11,3 +11,5 @@ Later days add integration, reconciliation, schema-evolution, failure-recovery, 
 `test_journeys.py` verifies causal ordering, cross-day sessions, contract validity, deterministic IDs, expected outcomes and observation cutoffs. Test discovery is limited to `tests/` so manual connection scripts are not executed.
 
 `test_delivery.py` checks Avro round trips, duplicate identity, corruption, customer remapping, Registry requests and acknowledgement failures with offline fakes.
+
+`test_bronze.py` checks configuration boundaries, JAAS escaping, missing/duplicate Kafka coordinates and producer-report integrity. It does not simulate or certify Spark/Delta runtime recovery.

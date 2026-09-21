@@ -118,3 +118,5 @@ evidence/            Reconciliation, performance, recovery, and demo evidence
 The project uses synthetic product-analytics data only. It contains no real patient, clinical, diagnosis, payment, or protected health information. `visit_completed` represents an observed product event in the simulation, not independently verified clinical care.
 
 Day 5 local journey simulation and reproduction: [guide](docs/day-05-journeys.md).
+
+Day 7 Kafka-to-Bronze implementation and cloud acceptance: [runbook](docs/day-07-bronze.md). Local checks pass; live Delta/checkpoint evidence remains pending.

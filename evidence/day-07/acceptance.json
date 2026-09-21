@@ -1,0 +1,17 @@
+{
+  "status": "LOCAL_VALIDATED_LIVE_PENDING",
+  "project_tests_passed": 32,
+  "offline_checks": [
+    "configuration validation",
+    "JAAS escaping",
+    "exact broker coordinate comparison",
+    "duplicate and missing delivery rejection",
+    "notebook syntax compilation"
+  ],
+  "live_checks": {
+    "kafka_to_delta": "NOT_RUN",
+    "checkpoint_restart_no_new_input": "NOT_RUN",
+    "checkpoint_restart_new_input": "NOT_RUN"
+  },
+  "guide": "docs/day-07-bronze.md"
+}

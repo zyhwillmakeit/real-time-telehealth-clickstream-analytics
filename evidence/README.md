@@ -8,3 +8,5 @@ Reviewed reconciliation, recovery, performance, freshness, cost, and final accep
 - [Day 5 acceptance](day-05/acceptance.json): deterministic journey counts and checksums; full outputs are generated under ignored `data/day-05/`.
 
 - [Day 6 local acceptance](day-06/acceptance.json): offline validation; live Registry and Avro confirmation pending.
+
+- [Day 7 local acceptance](day-07/acceptance.json): implementation checked offline; live Delta and checkpoint restart verification pending.

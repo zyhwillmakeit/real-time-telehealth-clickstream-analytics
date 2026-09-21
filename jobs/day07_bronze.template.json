@@ -1,0 +1,25 @@
+{
+  "name": "telehealth-s01-bronze-available-now",
+  "max_concurrent_runs": 1,
+  "tasks": [{
+    "task_key": "s01_bronze",
+    "existing_cluster_id": "REPLACE_WITH_TESTED_CLASSIC_CLUSTER_ID",
+    "timeout_seconds": 3600,
+    "max_retries": 0,
+    "notebook_task": {
+      "notebook_path": "/Workspace/REPLACE_WITH_REPO/notebooks/day07_bronze",
+      "source": "WORKSPACE",
+      "base_parameters": {
+        "bootstrap_servers": "REPLACE_WITH_BROKER",
+        "topic": "telehealth-clickstream",
+        "table": "telehealth_dev.bronze.clickstream_raw",
+        "checkpoint": "/Volumes/telehealth_dev/ops/stream_checkpoints/s01/v1",
+        "secret_scope": "REPLACE_WITH_SCOPE",
+        "api_key_secret": "kafka-api-key",
+        "api_secret_secret": "kafka-api-secret",
+        "mode": "available_now",
+        "max_offsets": "10000"
+      }
+    }
+  }]
+}

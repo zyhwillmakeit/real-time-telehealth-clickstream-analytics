@@ -12,6 +12,7 @@ Assumption: one developer, 4–5 hours per day. Each day ends with a reviewable 
 - [ ] **Day 6:** Connect the simulator to Kafka and Schema Registry; add configurable retry, delay, out-of-order, corrupt, and missing-customer scenarios.
   Local producer, Avro framing and fault planning implemented and tested; live Registry registration and Avro readback pending. See [Day 6](docs/day-06-kafka.md).
 - [ ] **Day 7:** Implement Kafka-to-Bronze raw ingestion with persistent checkpointing; prove stop/restart continuity.
+  Local implementation and offline checks complete; Databricks Delta writes and three-run checkpoint acceptance pending. See [Day 7](docs/day-07-bronze.md).
 
 ## Week 2 — Trusted Silver data
 

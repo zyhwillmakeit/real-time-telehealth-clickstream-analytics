@@ -11,7 +11,7 @@ topic, partition, offset, Kafka timestamp/type, ingestion timestamp and
 `raw_record_id=topic:partition:offset`. A best-effort `schema_id` is extracted from
 the Confluent header only when magic byte 0 and five bytes are present. This is
 not validation: even a corrupt body is preserved. Null values (Kafka tombstones),
-non-Avro values and unknown schema IDs are retained. Day 8 owns decoding/quarantine.
+non-Avro values and unknown schema IDs are retained. Step 8 owns decoding/quarantine.
 
 The sink is append-only Delta with a persistent checkpoint. There is no business
 event deduplication, watermark, foreachBatch merge or data-loss suppression.

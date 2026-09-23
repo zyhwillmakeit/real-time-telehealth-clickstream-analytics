@@ -2,10 +2,9 @@
 
 ## Status and boundaries
 
-Local implementation and offline tests are complete. Databricks execution, Delta
-commits and checkpoint continuity have NOT been verified locally. The Day 7 gate
-remains pending until the steps below pass. Day 6 Registry/Avro readback evidence
-is also still pending in the roadmap; the earlier JSON smoke test is separate.
+Local implementation and offline tests are complete. Step 6 live Kafka/Avro validation has also been completed, including Schema Registry registration, producer acknowledgements, Databricks Avro decoding, and event-ID reconciliation against the delivery report.
+
+Step 7 Databricks execution, Delta commits, and checkpoint continuity have not yet been fully verified. The Day 7 gate remains pending until the cloud validation steps below pass.
 
 S01 saves every Kafka delivery with unchanged binary key/value and headers,
 topic, partition, offset, Kafka timestamp/type, ingestion timestamp and

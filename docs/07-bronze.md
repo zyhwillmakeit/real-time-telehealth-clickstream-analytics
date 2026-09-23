@@ -4,7 +4,7 @@
 
 Local implementation and offline tests are complete. Step 6 live Kafka/Avro validation has also been completed, including Schema Registry registration, producer acknowledgements, Databricks Avro decoding, and event-ID reconciliation against the delivery report.
 
-Step 7 Databricks execution, Delta commits, and checkpoint continuity have not yet been fully verified. The Day 7 gate remains pending until the cloud validation steps below pass.
+Step 7 Databricks execution, Delta commits, and checkpoint continuity have not yet been fully verified. The Step 7 gate remains pending until the cloud validation steps below pass.
 
 S01 saves every Kafka delivery with unchanged binary key/value and headers,
 topic, partition, offset, Kafka timestamp/type, ingestion timestamp and
@@ -43,7 +43,7 @@ Do not use local `/tmp` or a newly randomized directory as the checkpoint.
 4. Put the Kafka reader credentials in a Databricks secret scope. Local `.env`
    is not uploaded or read by this notebook. Grant the Kafka identity read and
    describe access to the topic. Schema Registry credentials are not needed by S01.
-5. Open `notebooks/day07_bronze.py`. Configure widgets:
+5. Open `notebooks/07_bronze.py`. Configure widgets:
 
 | Widget | Value |
 |---|---|
@@ -69,10 +69,10 @@ Choose new local output directories for every publish attempt.
 
 ### Run A: ingest and finish
 
-Send 20 acknowledged messages locally (requires completed Day 6 configuration):
+Send 20 acknowledged messages locally (requires completed Step 6 configuration):
 
 ```bash
-python -m scripts.publish_events --send --limit 20 --rate 10 --output-dir data/day-07-send-a
+python -m scripts.publish_events --send --limit 20 --rate 10 --output-dir data/07-send-a
 ```
 
 Run the notebook in `available_now`. It must finish without a query exception.
@@ -83,7 +83,7 @@ only the last batch, not total ingestion. Record the Delta table version:
 spark.sql(f"DESCRIBE HISTORY {config.table}").select("version", "timestamp", "operation").show(5, False)
 ```
 
-Upload `data/day-07-send-a/delivery-report.json` to a readable UC Volume path.
+Upload `data/07-send-a/delivery-report.json` to a readable UC Volume path.
 Run this additional notebook cell, replacing the report path:
 
 ```python
@@ -121,7 +121,7 @@ were cleared, reload the saved A evidence rather than taking a fresh baseline.
 While the stream is stopped, send another acknowledged set:
 
 ```bash
-python -m scripts.publish_events --send --limit 20 --rate 10 --output-dir data/day-07-send-b
+python -m scripts.publish_events --send --limit 20 --rate 10 --output-dir data/07-send-b
 ```
 
 Reusing event IDs here is deliberate: Bronze must preserve both deliveries at

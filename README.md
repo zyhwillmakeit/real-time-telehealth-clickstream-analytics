@@ -108,6 +108,7 @@ evidence/            Reconciliation, performance, recovery, and demo evidence
 - [x] V1 event contracts, fixtures, validation rules, and customer DDL are executable
 - [x] A deterministic 10,000-customer source snapshot and update workflow are validated
 - [x] Thirty-day delivery plan has daily acceptance outputs
+- [x] Kafka-to-Bronze normal stop/restart acceptance passed with the same checkpoint (user-confirmed)
 - [ ] Cloud services and end-to-end connectivity are verified
 - [ ] Streaming and batch pipelines are implemented
 - [ ] dbt models and dashboards are published
@@ -119,4 +120,4 @@ The project uses synthetic product-analytics data only. It contains no real pati
 
 Day 5 local journey simulation and reproduction: [guide](docs/day-05-journeys.md).
 
-Day 7 Kafka-to-Bronze implementation and cloud acceptance: [runbook](docs/day-07-bronze.md). Local checks pass; live Delta/checkpoint evidence remains pending.
+Day 7 Kafka-to-Bronze normal stop/restart acceptance passed: 40 reported offsets matched, no missing or duplicate raw keys, and 30 → 50 table rows after the new batch. See the [runbook](docs/07-bronze.md) and [evidence index](evidence/day-07/README.md). Abnormal termination recovery remains a Day 23 task.

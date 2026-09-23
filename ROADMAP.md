@@ -11,8 +11,8 @@ Assumption: one developer, 4–5 hours per day. Each day ends with a reviewable 
 - [x] **Day 5:** Build the causal journey simulator with sessions, booking attempts, appointments, delayed virtual visits, and an expected-results manifest.
 - [ ] **Day 6:** Connect the simulator to Kafka and Schema Registry; add configurable retry, delay, out-of-order, corrupt, and missing-customer scenarios.
   Local producer, Avro framing and fault planning implemented and tested; live Registry registration and Avro readback pending. See [Day 6](docs/day-06-kafka.md).
-- [ ] **Day 7:** Implement Kafka-to-Bronze raw ingestion with persistent checkpointing; prove stop/restart continuity.
-  Local implementation and offline checks complete; Databricks Delta writes and three-run checkpoint acceptance pending. See [Day 7](docs/day-07-bronze.md).
+- [x] **Day 7:** Implement Kafka-to-Bronze raw ingestion with persistent checkpointing; prove stop/restart continuity.
+  User-confirmed normal-stop/restart acceptance recorded 2026-09-23: all 40 reported offsets matched, zero missing/duplicate raw keys, B=30 rows and C=50 rows. Query ID persisted; run ID changed. See [acceptance evidence](evidence/day-07/README.md) and [runbook](docs/07-bronze.md). Abnormal process termination remains Day 23.
 
 ## Week 2 — Trusted Silver data
 
@@ -53,7 +53,7 @@ Assumption: one developer, 4–5 hours per day. Each day ends with a reviewable 
 
 | Gate | Required result |
 |---|---|
-| Day 7 | A real Kafka message reaches immutable Bronze and survives a consumer restart |
+| Day 7 — passed (user-confirmed) | Kafka deliveries reach Bronze and survive normal stop/restart with the same checkpoint; 40 report offsets matched without missing or duplicate raw keys |
 | Day 14 | Deterministic raw input reconciles to unique Silver events and explainable quarantine output |
 | Day 21 | Business and platform-health dashboards form an end-to-end demonstrable loop |
 | Day 28 | A reviewer can reproduce, operate, fail, recover, and inspect the platform from the documentation |

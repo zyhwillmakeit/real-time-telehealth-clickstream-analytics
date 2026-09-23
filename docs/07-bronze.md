@@ -4,7 +4,9 @@
 
 Local implementation and offline tests are complete. Step 6 live Kafka/Avro validation has also been completed, including Schema Registry registration, producer acknowledgements, Databricks Avro decoding, and event-ID reconciliation against the delivery report.
 
-Step 7 Databricks execution, Delta commits, and checkpoint continuity have not yet been fully verified. The Step 7 gate remains pending until the cloud validation steps below pass.
+Step 7 normal stop/restart acceptance has passed, as confirmed by the user and recorded on 2026-09-23. All 40 Kafka offsets from the two successful producer reports were present with no missing or duplicate raw keys. Run B retained 30 rows; run C reached 50 rows after the second batch. The additional 10 rows came from earlier partially successful sends and were included in the baseline. The same checkpoint retained the query ID while run IDs changed.
+
+Preserve `A.json`, `B.json`, and `C.json` in `/Volumes/workspace/ops/validation_evidence/day07-check-03/`, together with both successful producer reports. See the [evidence index](../evidence/day-07/README.md). This local update records user-confirmed results; it does not claim a new read of the Volume or a rerun of the cleaned notebook. Abrupt process-termination recovery remains Day 23. The instructions below are retained for reproduction; completed evidence must not be overwritten.
 
 S01 saves every Kafka delivery with unchanged binary key/value and headers,
 topic, partition, offset, Kafka timestamp/type, ingestion timestamp and
@@ -43,7 +45,7 @@ Do not use local `/tmp` or a newly randomized directory as the checkpoint.
 4. Put the Kafka reader credentials in a Databricks secret scope. Local `.env`
    is not uploaded or read by this notebook. Grant the Kafka identity read and
    describe access to the topic. Schema Registry credentials are not needed by S01.
-5. Open `notebooks/07_bronze.py`. Configure widgets:
+5. Open `notebooks/07_bronze_layer_validation.py` (or its `.ipynb` equivalent). For the completed run, keep the default REVIEW stage and existing evidence directory; see [Notebook instructions](../notebooks/07_bronze_layer_validation_README.md). The following settings and steps illustrate a separate reproduction run, not a request to overwrite completed evidence. Configure widgets:
 
 | Widget | Value |
 |---|---|

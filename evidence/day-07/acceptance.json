@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_VALIDATED_LIVE_PENDING",
+  "status": "PASSED_USER_CONFIRMED",
   "project_tests_passed": 32,
   "offline_checks": [
     "configuration validation",
@@ -9,9 +9,49 @@
     "notebook syntax compilation"
   ],
   "live_checks": {
-    "kafka_to_delta": "NOT_RUN",
-    "checkpoint_restart_no_new_input": "NOT_RUN",
-    "checkpoint_restart_new_input": "NOT_RUN"
+    "kafka_to_delta": "PASS_USER_CONFIRMED",
+    "checkpoint_restart_no_new_input": "PASS_USER_CONFIRMED",
+    "checkpoint_restart_new_input": "PASS_USER_CONFIRMED"
   },
-  "guide": "docs/day-07-bronze.md"
+  "guide": "docs/07-bronze.md",
+  "recorded_on": "2026-09-23",
+  "confirmation_source": "User-reported completed Databricks acceptance; Volume evidence not re-read during this update",
+  "acceptance_scope": "Normal stop/completion and restart with the same checkpoint",
+  "evidence_index": "evidence/day-07/README.md",
+  "results": {
+    "successful_producer_reports": 2,
+    "acknowledged_offsets": 40,
+    "matched_offsets": 40,
+    "missing_raw_keys": 0,
+    "duplicate_raw_keys": 0,
+    "baseline_rows": 30,
+    "rows_after_b": 30,
+    "rows_after_c": 50,
+    "new_rows_in_c": 20,
+    "earlier_partial_send_rows": 10,
+    "same_checkpoint": true,
+    "query_id_unchanged": true,
+    "run_id_changed": true
+  },
+  "evidence": {
+    "storage": "Databricks Volume",
+    "directory": "/Volumes/workspace/ops/validation_evidence/day07-check-03/",
+    "acceptance_files": [
+      "A.json",
+      "B.json",
+      "C.json"
+    ],
+    "producer_reports_configured_paths": [
+      "/Volumes/workspace/ops/validation_evidence/delivery-report.json",
+      "/Volumes/workspace/ops/validation_evidence/report-b.json"
+    ],
+    "path_source": "Checked-in validation notebook defaults; day07-check-03 directory confirmed by user",
+    "downloaded_locally": false,
+    "retention": "Preserve all three acceptance files and both successful producer reports; do not overwrite"
+  },
+  "deferred": {
+    "day": 23,
+    "scope": "Abnormal process termination and broader failure-recovery scenarios",
+    "status": "NOT_VERIFIED_BY_DAY_7"
+  }
 }

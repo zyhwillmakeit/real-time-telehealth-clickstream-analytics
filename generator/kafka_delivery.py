@@ -24,7 +24,7 @@ def kafka_config(env):
         "sasl.password": env["KAFKA_API_SECRET"],
         "enable.idempotence": True,
         "acks": "all",
-        "delivery.timeout.ms": 30000,
+        "delivery.timeout.ms": 120000,
         "allow.auto.create.topics": False,
     }
 
@@ -118,7 +118,7 @@ def send_records(producer, topic, records, schema, rules, schema_id, *, rate=100
             producer.poll(0)
     except Exception as exc:  # noqa: BLE001 - preserve partial delivery evidence
         submission_error = type(exc).__name__
-    remaining = producer.flush(35)
+    remaining = producer.flush(125)
     acknowledged = sum(r["status"] == "ACKNOWLEDGED" for r in results)
     return {
         "status": "PASS"

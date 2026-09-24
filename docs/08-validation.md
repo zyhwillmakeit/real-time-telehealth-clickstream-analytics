@@ -1,7 +1,21 @@
 # Step 8 — validation and quarantine action guide
 
-Local implementation is complete. Spark/Delta and live Registry execution remain
-to be validated in Databricks. No cloud resources or Git state were modified.
+Core Step 8 implementation and cloud acceptance are complete based on the project
+owner's confirmation: normal input coverage/restart passed at 50 → 50 rows, and
+the isolated six-message run passed with 4 valid and 2 quarantined deliveries,
+exact Kafka-offset coverage and restart 6 → 6. Local tests also pass.
+
+This satisfies the original Step 8 milestone: S02 parsing, field/business
+validation, explicit quarantine reasons and separation of bad data from system
+failures (the latter also has offline tests). It does **not** mean every expanded
+cloud check below has been performed. Live tombstone/unknown-schema cases and
+new input after the S02 restart remain pending. Step 9 may begin.
+
+Use the [final acceptance notebook](../notebooks/08_nagative_acceptance.ipynb)
+or its [Databricks source export](../notebooks/08_nagative_acceptance.py).
+Both contain the same cells and no execution outputs or credentials. The spelling
+`nagative` is retained as requested. See the [reproduction guide](08-negative-acceptance.md)
+and [evidence index](../evidence/step-08/README.md).
 
 ## Direction
 
@@ -34,12 +48,14 @@ Later streaming jobs may read the physical Delta table and filter `route='valid'
 4. Run AvailableNow. Inspect the classified table and both views. Compare exact
    `raw_record_id` sets within the processed Bronze boundary: valid + quarantined
    must cover every input delivery once, and neither view may overlap the other.
-5. Use a separate test schema/source for negative cases: truncated Avro, invalid
+5. Use a separate test schema/source for negative cases (six-case run passed;
+   tombstones and unknown IDs remain pending in the cloud): truncated Avro, invalid
    business fields, multiple errors, tombstones and unknown IDs. Step 6 corruption
    scenarios can feed a separate Step 7 test stream. Keep production acceptance
    evidence untouched. Confirm late events and missing customers remain valid.
 6. Rerun with unchanged source, checkpoint and app ID; output counts must not grow.
-   Then add input and confirm only new deliveries appear. Save counts, missing/
+   The unchanged-input restart has passed. Adding input after the S02 restart
+   and confirming only new deliveries appear remains a separate pending check. Save counts, missing/
    duplicate key checks, error-code distributions and query progress in a Volume.
 
 After these checks pass, record cloud acceptance and proceed to Step 9 watermark

@@ -109,6 +109,7 @@ evidence/            Reconciliation, performance, recovery, and demo evidence
 - [x] A deterministic 10,000-customer source snapshot and update workflow are validated
 - [x] Thirty-day delivery plan has daily acceptance outputs
 - [x] Kafka-to-Bronze normal stop/restart acceptance passed with the same checkpoint (user-confirmed)
+- [x] Step 8 core classification and normal restart acceptance passed (user-confirmed)
 - [ ] Cloud services and end-to-end connectivity are verified
 - [ ] Streaming and batch pipelines are implemented
 - [ ] dbt models and dashboards are published
@@ -122,4 +123,4 @@ Day 5 local journey simulation and reproduction: [guide](docs/day-05-journeys.md
 
 Day 7 Kafka-to-Bronze normal stop/restart acceptance passed: 40 reported offsets matched, no missing or duplicate raw keys, and 30 → 50 table rows after the new batch. See the [runbook](docs/07-bronze.md) and [evidence index](evidence/day-07/README.md). Abnormal termination recovery remains a Day 23 task.
 
-Step 8 decoding, validation and quarantine: [action guide](docs/08-validation.md). Local code is ready; cloud acceptance remains pending.
+Step 8 core decoding, validation and quarantine acceptance passed (user-confirmed): normal 50-row coverage/restart and an isolated six-delivery boundary test (4 valid, 2 quarantined; restart 6 → 6). See the [action guide](docs/08-validation.md), [acceptance notebook](notebooks/08_nagative_acceptance.ipynb), and [evidence record](evidence/step-08/acceptance.json). Additional live cases remain explicitly pending; Step 9 can begin.

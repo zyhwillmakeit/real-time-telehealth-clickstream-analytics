@@ -1,7 +1,62 @@
 {
-  "status": "LOCAL_VALIDATED_LIVE_PENDING",
-  "project_tests_passed": 43,
-  "live_spark_delta": "NOT_RUN",
-  "live_registry": "NOT_RUN",
-  "guide": "docs/08-validation.md"
+  "step": 8,
+  "status": "CORE_ACCEPTANCE_PASSED_ADDITIONAL_LIVE_CHECKS_PENDING",
+  "basis": "Project owner confirmed the cloud results in conversation; raw Volume artifacts were not downloaded or independently inspected by this local update.",
+  "original_step_milestone": "COMPLETE",
+  "ready_for_step_09": true,
+  "local_verification": {
+    "project_tests_passed": 43,
+    "six_case_fixture": "OFFLINE_PASS",
+    "final_notebook": "STRUCTURE_AND_PYTHON_SYNTAX_CHECKED_NOT_EXECUTED_IN_CLOUD"
+  },
+  "normal_run": {
+    "verification": "USER_CONFIRMED",
+    "bronze_rows": 50,
+    "classified_rows": 50,
+    "missing": 0,
+    "unexpected": 0,
+    "duplicate_keys": 0,
+    "invalid_routes": 0,
+    "restart_before": 50,
+    "restart_after": 50
+  },
+  "negative_run": {
+    "verification": "USER_CONFIRMED",
+    "bronze_rows": 6,
+    "classified_rows": 6,
+    "valid_rows": 4,
+    "quarantine_rows": 2,
+    "missing": 0,
+    "unexpected": 0,
+    "duplicate_keys": 0,
+    "restart_before": 6,
+    "restart_after": 6,
+    "same_query_id": true,
+    "different_run_id": true,
+    "cases": [
+      "corrupt Avro",
+      "multiple business errors",
+      "35-minute late event",
+      "synthetic missing-customer ID preserved without lookup",
+      "same event_id at two Kafka offsets preserved"
+    ]
+  },
+  "evidence_directory": "/Volumes/workspace/ops/validation_evidence/step08-negative-01",
+  "evidence_files": [
+    "expected.json",
+    "producer-report.json",
+    "acceptance.json"
+  ],
+  "additional_live_checks_pending": [
+    "Kafka tombstone routing",
+    "unknown schema ID routing",
+    "new input after S02 restart"
+  ],
+  "limitations": [
+    "Customer snapshot absence was not independently checked; Step 8 performs no customer lookup.",
+    "Abrupt termination recovery is deferred to Step 23.",
+    "The cleaned final notebook adds stronger assertions; it has not itself been rerun in Databricks."
+  ],
+  "guide": "docs/08-validation.md",
+  "notebook": "notebooks/08_nagative_acceptance.ipynb"
 }

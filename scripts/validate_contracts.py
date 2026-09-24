@@ -44,7 +44,11 @@ def normalize_timestamps(
     errors: list[str] = []
     for field in fields:
         value = normalized.get(field)
-        if value is None or isinstance(value, datetime):
+        if value is None:
+            continue
+        if isinstance(value, datetime):
+            if value.tzinfo is None or value.utcoffset() != timedelta(0):
+                errors.append(f"TIMESTAMP_INVALID:{field}")
             continue
         if not isinstance(value, str):
             errors.append(f"TIMESTAMP_INVALID:{field}")

@@ -11,4 +11,4 @@ Reviewed reconciliation, recovery, performance, freshness, cost, and final accep
 
 - [Day 7 acceptance](day-07/README.md): user-confirmed normal stop/restart passed; 40 reported offsets matched, zero missing or duplicate raw keys, B=30 rows and C=50 rows. Original evidence remains in the Volume; see the index and [machine-readable record](day-07/acceptance.json).
 
-- [Step 8 local acceptance](step-08/acceptance.json): offline checks passed; live Spark/Delta acceptance pending.
+- [Step 8 core acceptance](step-08/acceptance.json): user-confirmed cloud normal coverage/restart (50 → 50) and six-message negative/boundary run (4 valid, 2 quarantined; restart 6 → 6). See the [evidence index and remaining checks](step-08/README.md). Raw evidence remains in the Volume; additional live cases are pending.

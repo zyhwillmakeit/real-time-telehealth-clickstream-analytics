@@ -42,3 +42,7 @@ Watermarks intentionally trade completeness after a threshold for bounded stream
 
 Spark owns parsing, event reliability, deduplication, quarantine, and customer enrichment. dbt owns journey facts, appointment maturity, metric formulas, analytical marts, tests, and documentation. This keeps changing business definitions out of the streaming reliability layer.
 
+
+## ADR-008 — Step 8 atomic classification storage
+
+Both routing outcomes share `silver.classified_deliveries`, committed once per microbatch with Delta transaction identifiers. `validated_deliveries` and `quarantine_events` are views over this table. This preserves the planned logical outputs while avoiding partial commits to two physical sinks. Raw delivery identity and rule version remain available; arbitrary cross-checkpoint replay is not deduplicated by this design.

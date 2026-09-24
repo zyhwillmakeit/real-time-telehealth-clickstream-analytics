@@ -9,4 +9,6 @@ Reviewed reconciliation, recovery, performance, freshness, cost, and final accep
 
 - [Day 6 local acceptance](day-06/acceptance.json): offline validation; live Registry and Avro confirmation pending.
 
-- [Day 7 local acceptance](day-07/acceptance.json): implementation checked offline; live Delta and checkpoint restart verification pending.
+- [Day 7 acceptance](day-07/README.md): user-confirmed normal stop/restart passed; 40 reported offsets matched, zero missing or duplicate raw keys, B=30 rows and C=50 rows. Original evidence remains in the Volume; see the index and [machine-readable record](day-07/acceptance.json).
+
+- [Step 8 local acceptance](step-08/acceptance.json): offline checks passed; live Spark/Delta acceptance pending.

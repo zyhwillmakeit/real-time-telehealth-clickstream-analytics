@@ -1,0 +1,7 @@
+{
+  "status": "LOCAL_VALIDATED_LIVE_PENDING",
+  "project_tests_passed": 43,
+  "live_spark_delta": "NOT_RUN",
+  "live_registry": "NOT_RUN",
+  "guide": "docs/08-validation.md"
+}

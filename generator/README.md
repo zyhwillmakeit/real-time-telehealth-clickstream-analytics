@@ -1,6 +1,6 @@
 # Generator
 
-Day 4 adds deterministic customer-source generation. `customer_data.py` owns the shared V1 generation, update, CSV, manifest, and validation logic. `customer_postgres.py` owns transactional PostgreSQL upserts using the Day 3 DDL.
+Step 4 adds deterministic customer-source generation. `customer_data.py` owns the shared V1 generation, update, CSV, manifest, and validation logic. `customer_postgres.py` owns transactional PostgreSQL upserts using the Day 3 DDL.
 
 ```bash
 # Reproduce the reviewed 10,000-customer V1 snapshot.

@@ -119,8 +119,8 @@ evidence/            Reconciliation, performance, recovery, and demo evidence
 
 The project uses synthetic product-analytics data only. It contains no real patient, clinical, diagnosis, payment, or protected health information. `visit_completed` represents an observed product event in the simulation, not independently verified clinical care.
 
-Day 5 local journey simulation and reproduction: [guide](docs/day-05-journeys.md).
+Step 5 local journey simulation and reproduction: [guide](docs/day-05-journeys.md).
 
-Day 7 Kafka-to-Bronze normal stop/restart acceptance passed: 40 reported offsets matched, no missing or duplicate raw keys, and 30 → 50 table rows after the new batch. See the [runbook](docs/07-bronze.md) and [evidence index](evidence/day-07/README.md). Abnormal termination recovery remains a Day 23 task.
+Step 7 Kafka-to-Bronze normal stop/restart acceptance passed: 40 reported offsets matched, no missing or duplicate raw keys, and 30 → 50 table rows after the new batch. See the [runbook](docs/07-bronze.md) and [evidence index](evidence/day-07/README.md). Abnormal termination recovery remains a Day 23 task.
 
 Step 8 core decoding, validation and quarantine acceptance passed (user-confirmed): normal 50-row coverage/restart and an isolated six-delivery boundary test (4 valid, 2 quarantined; restart 6 → 6). See the [action guide](docs/08-validation.md), [acceptance notebook](notebooks/08_nagative_acceptance.ipynb), and [evidence record](evidence/step-08/acceptance.json). Additional live cases remain explicitly pending; Step 9 can begin.
